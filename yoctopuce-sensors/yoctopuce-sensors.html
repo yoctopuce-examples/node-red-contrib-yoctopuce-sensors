@@ -1,0 +1,67 @@
+<script type="text/javascript">
+    RED.nodes.registerType('yoctopuce-sensor', {
+        category: 'input',
+        color: '#C0C0C0',
+        defaults: {
+            name: {value: ""},
+            hostname: {
+                value: "127.0.0.1", required: true, validate: function (v) {
+                    return v.length > 0;
+                }
+            },
+            port: {value: "4444", required: true, validate: RED.validators.number()},
+            hwid: {
+                value: "", required: true, validate: function (v) {
+                    return v.length > 0;
+                }
+            }
+        },
+        credentials: {
+            user: {type: "text"},
+            password: {type: "password"}
+        },
+        inputs: 0,
+        outputs: 1,
+        icon: "yoctopuce.png",
+        paletteLabel: "YSensor",
+        label: function () {
+            return this.name || "YSensor";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="yoctopuce-sensor">
+    <div class="form-row">
+        <label for="node-input-hostname"><i class="fa fa-tag"></i>YoctoHub hostname</label>
+        <input type="text" id="node-input-hostname" placeholder="Hostname">
+    </div>
+    <div class="form-row">
+        <label for="node-input-port"><i class="fa fa-tag"></i>YoctoHub port</label>
+        <input type="text" id="node-input-port" placeholder="Port">
+    </div>
+    <div class="form-row">
+     <label for="node-input-user"><i class="icon-tag"></i>YoctoHub username</label>
+     <input type="text" id="node-input-user">
+ </div>
+ <div class="form-row">
+     <label for="node-input-password"><i class="icon-tag"></i>YoctoHub password</label>
+     <input type="password" id="node-input-password">
+ </div>
+
+    <div class="form-row">
+        <label for="node-input-hwid"><i class="fa fa-tag"></i>YSensor hardware ID</label>
+        <input type="text" id="node-input-hwid" placeholder="HardwareID">
+    </div>
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+
+
+</script>
+
+<script type="text/x-red" data-help-name="yoctopuce-sensors">
+    <p>A Node-RED node to get live value with Yoctopuce sensors.</p>
+
+
+</script>
