@@ -8,6 +8,10 @@
   "keywords": [
     "node-red"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yoctopuce-examples/node-red-contrib-yoctopuce-sensors.git"
+  },
   "node-red": {
     "nodes": {
       "sample": "yoctopuce-sensors/yoctopuce-sensors.js"
