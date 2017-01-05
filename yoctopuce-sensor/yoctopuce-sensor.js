@@ -53,7 +53,7 @@ module.exports = function (RED) {
                     return;
                 }
                 node.ysensor.registerValueCallback(function (obj_fct, str_value) {
-                    let msg = {payload: str_value};
+                    let msg = {payload: str_value,topic:node.name};
                     node.send(msg);
                 });
                 node.ysensor.isOnline().then((isonline) => {
