@@ -14,7 +14,7 @@
   },
   "node-red": {
     "nodes": {
-      "sample": "yoctopuce-sensors/yoctopuce-sensors.js"
+      "sample": "yoctopuce-sensor/yoctopuce-sensor.js"
     }
   }
 }
