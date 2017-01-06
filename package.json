@@ -5,6 +5,7 @@
   "dependencies": {
     "yoctolib-es": "1.10.26144"
   },
+  "license": "Apache-2.0",
   "keywords": [
     "node-red"
   ],
@@ -16,5 +17,10 @@
     "nodes": {
       "sample": "yoctopuce-sensor/yoctopuce-sensor.js"
     }
-  }
+  },
+  "author": "Yoctopuce",
+  "bugs": {
+        "url": "https://github.com/yoctopuce-examples/node-red-contrib-yoctopuce-sensors/issues"
+  },
+  "homepage": "https://github.com/yoctopuce-examples/node-red-contrib-yoctopuce-sensors#readme"
 }
