@@ -37,7 +37,7 @@ module.exports = function (RED) {
                 return node.yctx.RegisterHub(node.huburl, errmsg);
             }).then((res) => {
                 if (res != YAPI.SUCCESS) {
-                    node.error('Cannot contact VirtualHub on 127.0.0.1: ' + errmsg.msg);
+                    node.error('Cannot contact ' + node.huburl + ': ' + errmsg.msg);
                     node.status({fill: "red", shape: "ring", text: "disconnected"});
                     return;
                 }
