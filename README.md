@@ -2,6 +2,11 @@ node-red-contrib-yoctopuce-sensors
 ==================================
 A Node-RED node to interact with Yoctopuce Sensors.
 
+Deprecated!
+-----------
+*This Node-RED package is deprecated. Please use [node-red-contrib-yoctopuce](https://www.npmjs.com/package/node-red-contrib-yoctopuce)
+package that provide the same features and much more.*
+
 Install
 -----------
 
